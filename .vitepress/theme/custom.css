@@ -1,0 +1,25 @@
+/* .vitepress/theme/custom.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+.VPNavBarTitle .title{
+    font-family: 'Dancing Script', cursive !important; /* 使用你从 Google Fonts 选择的字体 */
+    font-size: 25px !important;
+}
+  
+.VPImage{
+    border-radius: 50%; 
+}
+
+.content-body {
+    font-size: 18px !important;
+}
+
+body {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  
