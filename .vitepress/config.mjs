@@ -56,13 +56,13 @@ export default defineConfig({
   // 例如本仓库部署时访问路径为 https://ok406lhq.github.io/personal-docs-main/
   base: '/personal-docs-main/',
   // 站点配置
-  title: "BinaryCoder777",
+  title: "ok406lhq",
   description: "个人站点",
   head:[
-    ['link', { rel: 'icon', href: 'https://raw.githubusercontent.com/binarycoder777/personal-pic/main/pic/favicon.ico' }]  // 使用根路径引用
+    ['link', { rel: 'icon', href: '/personal-docs-main/.vitepress/public/favicon.ico' }]  // 使用根路径引用
   ],
   themeConfig: {
-    siteTitle: 'BinaryCoder777',
+    siteTitle: 'ok406lhq',
     // 搜索栏
     search: {
       provider: 'local'

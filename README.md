@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="200" src="https://raw.githubusercontent.com/binarycoder777/binarycoder777.github.io/main/public/favicon.ico">
+    <img width="200" src="https://raw.githubusercontent.com/ok406lhq/MoPictureBox/refs/heads/main/blog/favicon.ico">
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@
 
 </div>
 
-![](https://raw.githubusercontent.com/binarycoder777/personal-pic/main/pic/20250102102537.png)
+![](https://raw.githubusercontent.com/ok406lhq/MoPictureBox/refs/heads/main/blog/screenshot_20251231.png)
 
 ## 关于站点
 

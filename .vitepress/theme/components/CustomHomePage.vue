@@ -36,7 +36,7 @@
 
                 <!-- 卡片容器 -->
                 <div class="cards-container" ref="scrollContainer" @scroll="checkScrollPosition">
-                    <div class="cards-wrapper" :style="{ transform: `translateX(${scrollPosition}px)` }">
+                    <div class="cards-wrapper">
                         <!-- 项目卡片 -->
                         <template v-for="project in projects" :key="project.id">
                             <!-- 有链接的卡片 -->
@@ -93,7 +93,6 @@ export default {
     name: 'CustomHomePage',
     setup() {
         const scrollContainer = ref(null);
-        const scrollPosition = ref(0);
         const isAtStart = ref(true);
         const isAtEnd = ref(false);
         const loading = ref(true);
@@ -101,50 +100,50 @@ export default {
         const projects = [
             {
                 id: 1,
-                title: 'LobChat',
+                title: 'RTCoin',
                 status: 'completed',
-                description: '一个开源、现代设计的 AI 聊天框架。',
-                tags: ['OpenAI', 'Claude 3', 'DeepSeek'],
-                link: 'https://lobe-chat-eight-virid-32.vercel.app/chat'
+                description: '💻一个React Native开发的跨平台界面框架，可以作为学习和构建跨平台移动应用的基础记录，支持iOS和Android双平台。',
+                tags: ['React Native', 'App', '跨平台'],
+                link: 'https://github.com/ok406lhq/RTCoin'
             },
             {
                 id: 2,
-                title: 'weekly-report',
+                title: 'BabySongs',
                 status: 'completed',
-                description: '一个记录互联网上实时发生的科技新闻和奇闻趣事的站点，项目保持每周六或周日更新，喜欢的朋友可以免费订阅，不错过每周发生的科技奇闻趣事～',
-                tags: ['周刊', '科技', '前沿'],
-                link: 'https://binarycoder777.com/'
+                description: '👶一个专为婴幼儿设计的音乐应用，提供丰富的儿歌和童谣资源，帮助宝宝在愉快的音乐氛围中成长。',
+                tags: ['Android', '音乐播放器', 'App'],
+                link: 'https://github.com/ok406lhq/BabySongs'
             },
             {
                 id: 3,
-                title: 'News Now',
+                title: 'genshin-web-game',
                 status: 'completed',
-                description: '优雅阅读实时最热门新闻',
-                tags: ['新闻', '热门', '阅读'],
-                link: 'https://newsnow.binarycoder.org/'
+                description: '🤣原神但网页版！一个用AI开发的基于Web技术开发的原神游戏网页版，提供类似原神的游戏体验，方便玩家在浏览器中畅玩。',
+                tags: ['原神', 'H5', 'OpenAI'],
+                link: 'https://github.com/ok406lhq/genshin-web-game'
             },
             {
                 id: 4,
-                title: 'CodeAtlas',
+                title: 'personal-docs-main',
                 status: 'completed',
-                description: '一个收录了笔者平时遇见的工具、资源、站点导航站，方便笔者自己使用，也分享给有需要的朋友。',
+                description: '🔗一个收录了笔者平时遇见的工具、资源、站点导航站，方便笔者自己使用，也分享给有需要的朋友。',
                 tags: ['工具', '资源', '导航'],
-                link: 'https://personal-k7of91wlx-binarycoder777s-projects.vercel.app/'
+                link: 'https://github.com/ok406lhq/personal-docs-main'
             },
             {
                 id: 5,
-                title: '礼尚往来',
-                status: 'in-progress',
-                description: '生活中记录人情往来，婚礼酒宴，生日宴会，满月酒，乔迁之喜，升学宴，寿宴等的一款小程序',
-                tags: ['小程序', '记录', '人情往来'],
-                // link: '#'
+                title: '阅读路线',
+                status: 'completed',
+                description: '📚一个电子书阅读器App，基于MD设计模式的Android应用，支持多种格式的电子书阅读，提供良好的阅读体验。',
+                tags: ['App', '阅读', '电子书'],
+                link: 'https://gitee.com/github-22291214/ReadingBook'
             },
             {
                 id: 6,
-                title: '酒桌欢乐局',
+                title: '游戏资讯小程序',
                 status: 'in-progress',
-                description: '一款适合聚会、饭局、朋友局的拼酒小程序，让你和朋友边玩边喝，挑战喝酒极限！支持多种玩法，快速开局，让酒局更有趣！',
-                tags: ['小程序', '拼酒', '聚会'],
+                description: '🕹️一款只记录关注游戏的相关资讯，包括工作室声明和开发进度，以及各种攻略等内容的轻量级小程序。',
+                tags: ['小程序', '游戏', '资讯'],
                 // link: '#'
             },
 
@@ -153,33 +152,31 @@ export default {
 
         const checkScrollPosition = () => {
             if (!scrollContainer.value) return;
-            
             const container = scrollContainer.value;
-            isAtStart.value = scrollPosition.value >= 0;
-            isAtEnd.value = scrollPosition.value <= -(container.scrollWidth - container.clientWidth);
+            const scrollLeft = container.scrollLeft;
+            const maxScrollLeft = Math.max(0, container.scrollWidth - container.clientWidth);
+
+            // 容差 1 像素，避免像素取整导致的误判
+            isAtStart.value = scrollLeft <= 1;
+            isAtEnd.value = scrollLeft >= Math.max(0, maxScrollLeft - 1);
         };
 
         const scroll = (direction) => {
             if (!scrollContainer.value) return;
-            
+
             const container = scrollContainer.value;
             const cardWidth = 320; // 卡片宽度
             const gap = 24; // 卡片间距
             const scrollAmount = cardWidth + gap; // 每次滚动的距离
-            const containerWidth = container.clientWidth;
-            const totalWidth = container.scrollWidth;
-            
+
             if (direction === 'left') {
-                scrollPosition.value = Math.min(0, scrollPosition.value + scrollAmount);
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             } else {
-                // 计算最大滚动距离，确保最后一张卡片能完全显示
-                const maxScroll = -(Math.ceil((totalWidth - containerWidth) / scrollAmount) * scrollAmount);
-                scrollPosition.value = Math.max(maxScroll, scrollPosition.value - scrollAmount);
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
-            
-            // 更新滚动状态
-            isAtStart.value = scrollPosition.value >= 0;
-            isAtEnd.value = scrollPosition.value <= -(totalWidth - containerWidth);
+
+            // 稍后检查位置（scroll 事件也会触发 checkScrollPosition）
+            setTimeout(checkScrollPosition, 300);
         };
 
         const getStatusClass = (status) => {
@@ -226,7 +223,6 @@ export default {
 
         return {
             scrollContainer,
-            scrollPosition,
             isAtStart,
             isAtEnd,
             projects,

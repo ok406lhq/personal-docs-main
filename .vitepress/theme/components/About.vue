@@ -20,7 +20,7 @@
       <!-- <br /> -->
       <p>
         👋
-        一名软件开发工程师，专业领域涵盖了后端开发、数据库设计和系统架构，专注于将复杂的问题转化为简单而直观的设计。
+        一名 游戏公司的 SDK 工程师，Android、鸿蒙、小程序及H5 SDK的开发与维护者，热爱编程，喜欢探索技术的边界，不断提升自己的技术水平。
       </p>
       <br />
       <p>
@@ -30,12 +30,12 @@
       <br />
       <p>
         🚀
-        注重团队协作，喜欢和团队成员分享经验、学习新技术，并持续关注行业的最新动态，以确保我的技术栈始终保持更新。
+        热衷于学习和应用新技术，积极参与技术社区的交流与分享，乐于接受挑战并解决复杂的问题。
       </p>
       <br />
       <p>
         🌐
-        当不在编写代码的时候，热衷于探索互联网世界。可能在学习新的编程语言，研究新的技术趋势，或者在个人项目上挥洒创意。
+        当不在编写代码的时候，喜欢玩游戏，在游戏中涉猎不同的世界，体验各种角色的冒险旅程。
       </p>
       <br />
       <div class="social-links">
@@ -76,79 +76,90 @@
           <li class="timeline-item">
             <!-- <h4 class="h4 timeline-item-title">Creative director</h4> -->
 
-            <span>2019</span>
+            <span>2014</span>
 
             <p class="timeline-text">
-              步入大学校园，为"计算机科学与技术"的学士学位🎓努力着，并于2020年期间加入了学院的创新实验室AC&Lab💻，开启了后端开发的学习旅程📚...
+              进入大学后我选择了计算机科学与技术专业，并于2016年加入学院实验室——从那时起，我便踏上了Android开发的学习与实践之旅。
             </p>
           </li>
 
           <li class="timeline-item">
             <!-- <h4 class="h4 timeline-item-title">Art director</h4> -->
 
-            <span>2022</span>
+            <span>2017</span>
 
             <p class="timeline-text">
-              纸上得来终觉浅，绝知此事要躬行🖊。在大三期间独自去往杭州某互联网公司实习，从理论到实际，抽象到具体的蜕变，此时真正体会到了知识与实际的应用...
+              2017年大四开始外出实习，先从事Android测试，后转为Android开发；为适应市场需求，使用 React Native、Vue 等技术栈进行App开发，积累了实战经验
             </p>
           </li>
 
           <li class="timeline-item">
             <!-- <h4 class="h4 timeline-item-title">Web designer</h4> -->
 
-            <span>2023 — 至今</span>
+            <span>2018 — 至今</span>
             <p class="timeline-text">
-              毕业啦🍻，编码🖱是工作的主旋律。面对各种各样的挑战与机遇⛰，梦想指引着每一步的坚定前行🍃，年轻人，加油吧💪🏻...
+              工作，偶尔娱乐，家庭，人生苦短，死亡来得如此轻易。如果我只是随波逐流，转眼间就会变成老翁。
             </p>
           </li>
         </ol>
       </section>
 
       <section class="skill">
-        <h2 class="features-title" style="text-align: center">个人技能</h2>
-        <p class="features-subtitle">学习是一辈子的事儿，活到老，学到老...</p>
+        <h2 class="features-title" style="text-align: center">常用语言</h2>
+        <p class="features-subtitle">常用开发语言及使用占比</p>
         <ul class="skills-list content-card">
           <li class="skills-item">
             <div class="title-wrapper">
-              <h5 class="h5">后端开发</h5>
-              <data value="80">90%</data>
+              <h5 class="h5">Java</h5>
+              <data value="68.01">68.01%</data>
             </div>
 
             <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 90%"></div>
+              <div class="skill-progress-fill" style="width: 68.01%"></div>
             </div>
           </li>
 
           <li class="skills-item">
             <div class="title-wrapper">
-              <h5 class="h5">系统优化</h5>
-              <data value="70">70%</data>
+              <h5 class="h5">JavaScript</h5>
+              <data value="21.22">21.22%</data>
             </div>
 
             <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 70%"></div>
+              <div class="skill-progress-fill" style="width: 21.22%"></div>
             </div>
           </li>
 
           <li class="skills-item">
             <div class="title-wrapper">
-              <h5 class="h5">数据设计</h5>
-              <data value="90">80%</data>
+              <h5 class="h5">HTML</h5>
+              <data value="6.36">6.36%</data>
             </div>
 
             <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 80%"></div>
+              <div class="skill-progress-fill" style="width: 6.36%"></div>
             </div>
           </li>
 
           <li class="skills-item">
             <div class="title-wrapper">
-              <h5 class="h5">架构设计</h5>
-              <data value="50">50%</data>
+              <h5 class="h5">TypeScript</h5>
+              <data value="2.27">2.27%</data>
             </div>
 
             <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 50%"></div>
+              <div class="skill-progress-fill" style="width: 2.27%"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Python</h5>
+              <data value="2.14">2.14%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 2.14%"></div>
             </div>
           </li>
         </ul>
